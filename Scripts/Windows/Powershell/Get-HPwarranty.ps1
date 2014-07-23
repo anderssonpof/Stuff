@@ -54,7 +54,7 @@ try {
 	$type = [Microsoft.Win32.RegistryHive]::LocalMachine;
 	$reg = [Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey($type, $ComputerName);
 	$regKey= $reg.OpenSubKey("SOFTWARE\\",$True);
-	$regkey.CreateSubKey("Landskrona stad");
+	$regkey.CreateSubKey("CompanyName");
 	$regKey= $reg.OpenSubKey("SOFTWARE\\CompanyName",$True);
 	$regkey.CreateSubKey("Warranty");
 	$regKey= $reg.OpenSubKey("SOFTWARE\\CompanyName\Warranty",$True);
