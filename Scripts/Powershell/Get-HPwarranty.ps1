@@ -40,7 +40,7 @@ try {
 	
 	#Parse the web page find the table
 	$table = $result.ParsedHtml.getElementsByTagName("td") | where "classname" -match "bottomSpaceBig" | Select -ExpandProperty InnerText;
-	$warrantytd = $table[9];
+	$warrantytd = $table[7];
 	$warranty = $warrantytd -split " ";
 	
 	Write-host "Writing warranty information...";
